@@ -1,0 +1,2 @@
+rootProject.name = 'warehouse_api_ms'
+include 'app'
