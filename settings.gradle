@@ -1,2 +1,3 @@
 rootProject.name = 'warehouse_api_ms'
 include 'app'
+include 'rest-api'
