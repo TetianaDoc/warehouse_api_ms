@@ -1,0 +1,5 @@
+dependencies {
+    implementation libs.spring_boot_web_starter
+
+    testImplementation libs.test
+}
