@@ -1,11 +1,15 @@
 package com.volmyr.java_tour.warehouse_api_ms.rest_api.controllers;
 
+import domain.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Warehouse API rest controller.
@@ -24,5 +28,25 @@ public final class ApiRestControllerV1 {
     public ResponseEntity<String> version() {
         logger.info("Got version request");
         return ResponseEntity.ok(VERSION);
+    }
+
+    private static final Map<Long, Product> warehouse = new HashMap<>();
+
+    public int numberOfGoods() {
+        return warehouse.size();
+    }
+
+    public void addOneNewGood(Product product) {
+        warehouse.put(product.getId(), product);
+    }
+
+
+    public void deleteOneGoodFromWarehouse(Product product) {
+        warehouse.remove(product.getId());
+    }
+
+
+    public Product getProduct(long productId) {
+       return warehouse.get(productId);
     }
 }
