@@ -12,7 +12,9 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 dependencies {
-    implementation libs.spring_boot_starter
+    implementation project(':rest-api')
+
+    implementation libs.spring_boot_web_starter
 }
 
 springBoot {
