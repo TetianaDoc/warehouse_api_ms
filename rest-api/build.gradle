@@ -1,5 +1,9 @@
 dependencies {
     implementation libs.spring_boot_web_starter
+    implementation libs.spring_boot_jpa
+    implementation libs.database_postgresql
+    implementation libs.spring_boot_web_starter
+    implementation libs.hikari
 
     testImplementation libs.test
 }

@@ -1,6 +1,7 @@
 package com.volmyr.java_tour.warehouse_api_ms.rest_api.controllers;
 
-import domain.Product;
+import com.volmyr.java_tour.warehouse_api_ms.rest_api.domain.Product;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

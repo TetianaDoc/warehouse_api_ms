@@ -1,8 +1,24 @@
-package domain;
+package com.volmyr.java_tour.warehouse_api_ms.rest_api.domain;
+
+import javax.persistence.*;
+
+/**
+ * Base entity for product.
+ */
+
+@Entity
+@Table(name = "products")
 
 public class Product {
-    private String name;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_products")
     private long id;
+
+    @Column(name = "name", length = 100, nullable = false)
+    private String name;
+
+    @Column(name = "price", nullable = false)
     private double price;
 
     public String getName() {
